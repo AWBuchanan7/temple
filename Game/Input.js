@@ -12,18 +12,6 @@ var Player3 = function() {
     this.IsPressingButton();
 };
 
-var Buttons = function() {
-    this.c_right = 1;
-    this.c_left = 2;
-    this.c_down = 4;
-    this.c_up = 8;
-    this.c_right_up = 9;
-    this.c_right_down = 5;
-    this.c_left_up = 10;
-    this.c_left_down = 6;
-    this.z_button = 2000;
-}
-
 //sync the camera rotations
 Player1.prototype.IsPressingButton = function(button) {
     // console.log("button press: (1)-(" + button + ")" + (input_player1 == button));
@@ -46,8 +34,4 @@ exports.Player1 = function() {
 
 exports.Player3 = function() {
     return new Player3();
-}
-
-exports.ButtonMap = function() {
-    return new Buttons();
 }
