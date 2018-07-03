@@ -1,13 +1,13 @@
 var Buttons = function() {
     var ButtonEnum = {
-        "C_RIGHT": { value:1, type:1 };
-        "C_LEFT": { value:2, type:1};
-        "C_DOWN": { value:4, type:1 };
         "C_UP":  { value:8, type:1 };
         "C_RIGHT_UP": { value:9, type:1 };
+        "C_RIGHT": { value:1, type:1 };
         "C_RIGHT_DOWN": { value:5, type:1 };
-        "C_LEFT_UP":  { value:10, type:1 };
+        "C_DOWN": { value:4, type:1 };
         "C_LEFT_DOWN": { value:6, type:1 };
+        "C_LEFT": { value:2, type:1};
+        "C_LEFT_UP":  { value:10, type:1 };
 
         "A": { value:4000, type:1 };
         "B": { value:8000, type:1 };
