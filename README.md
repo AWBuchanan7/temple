@@ -1,5 +1,5 @@
 # Temple
-A JS library for modding Ocarina of Time with Project64.
+A JS library for modding The Legend of Zelda: Ocarina of Time with Project64.
 
 Please feel free to open an issue if you have problems! Or, if you are a hacker please feel free to contribute or to open an issue to get in touch with me to share information about the game! Anything helps!
 
