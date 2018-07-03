@@ -12,12 +12,24 @@ var Camera = function() {
     mem.bindvar(this, 0x801C86CA, 'camera_rest_rotation', u16)
     mem.bindvar(this, 0x801C8722, 'camera_rotation', u16)
     mem.bindvar(this, 0x801C86C4, 'camera_unknown', u32)
-
-    this.SyncRotation();
+       
     this.IsFollowingLink();
     this.Roll_Up(); 
     this.Roll_Down();
+    this.Rotate_Right();
+    this.Rotate_Left();
+    this.SyncRotation();
 };
+
+Camera.prototype.Rotate_Right = function(rotation) {
+    this.camera_rotation += rotation; 
+    this.SyncRotation(this.camera_rotation);
+}
+
+Camera.prototype.Rotate_Left = function(rotation) {
+    this.camera_rotation -= rotation; 
+    this.SyncRotation(this.camera_rotation);
+}
 
 //sync the camera rotations
 Camera.prototype.SyncRotation = function(rotation) {
