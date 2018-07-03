@@ -1,7 +1,7 @@
 /*
  * Configurable variables.
  */
-var rotation_amount = 768;
+var rotation_amount = 864;
 var roll_amount = 6;
 var zoom_amount = 24;
 
