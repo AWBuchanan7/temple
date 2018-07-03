@@ -50,24 +50,12 @@ Camera.prototype.IsFollowingLink = function() {
     return this.camera_context == 0xC114;
 }
 
-Camera.prototype.Roll_Up = function() {
-    if (this.camera_roll < 0x431E) {
-        this.camera_roll += 4
-    }
-    // Limit the camera roll to non-glitchy values
-    if (this.camera_roll > 0x431E) {
-        this.camera_roll = 0x431E
-    }
+Camera.prototype.Roll_Up = function(rollAmount) {
+    this.camera_roll += rollAmount
 }
 
-Camera.prototype.Roll_Down = function() {
-    if (this.camera_roll > 0x4228) {
-        this.camera_roll -= 4
-    }
-    // Limit the camera roll to non-glitchy values
-    if (this.camera_roll < 0x4228 ) {
-        this.camera_roll = 0x4228
-    }
+Camera.prototype.Roll_Down = function(rollAmount) {
+    this.camera_roll -= rollAmount
 }
 
 exports.GameCamera = function() {
