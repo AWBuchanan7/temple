@@ -5,13 +5,14 @@
 var REST_TARGET_CONVERSION = 32767; 
 
 var Camera = function() {
-    mem.bindvar(this, 0x801C8680, 'camera_context', u16)
-    mem.bindvar(this, 0x801C86F8, 'camera_roll', u16)
-    mem.bindvar(this, 0x801C86CF, 'camera_countdown_to_rest', u8)
-    mem.bindvar(this, 0x801C86B5, 'camera_resting', u8)
-    mem.bindvar(this, 0x801C86CA, 'camera_rest_rotation', u16)
-    mem.bindvar(this, 0x801C8722, 'camera_rotation', u16)
-    mem.bindvar(this, 0x801C86C4, 'camera_unknown', u32)
+    mem.bindvar(this, 0x801C8680, 'camera_context', u16);
+    mem.bindvar(this, 0x801C86F8, 'camera_roll', u16);
+    mem.bindvar(this, 0x801C86CF, 'camera_countdown_to_rest', u8);
+    mem.bindvar(this, 0x801C86B5, 'camera_resting', u8);
+    mem.bindvar(this, 0x801C86CA, 'camera_rest_rotation', u16);
+    mem.bindvar(this, 0x801C8722, 'camera_rotation', u16);
+    mem.bindvar(this, 0x801C86C4, 'camera_unknown', u32);
+    mem.bindvar(this, 0x81106BEC, 'camera_zoom', u16);
        
     this.IsFollowingLink();
     this.Roll_Up(); 
@@ -19,6 +20,8 @@ var Camera = function() {
     this.Rotate_Right();
     this.Rotate_Left();
     this.SyncRotation();
+    this.Zoom_In();
+    this.Zoom_Out();
 };
 
 Camera.prototype.Rotate_Right = function(rotation) {
@@ -56,6 +59,14 @@ Camera.prototype.Roll_Up = function(rollAmount) {
 
 Camera.prototype.Roll_Down = function(rollAmount) {
     this.camera_roll -= rollAmount
+}
+
+Camera.prototype.Zoom_In = function(zoomAmount) {
+    this.camera_zoom += zoomAmount;
+}
+
+Camera.prototype.Zoom_Out = function(zoomAmount) {
+    this.camera_zoom -= zoomAmount;
 }
 
 exports.GameCamera = function() {
