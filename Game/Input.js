@@ -6,16 +6,19 @@ var Player1 = function() {
     mem.bindvar(this, 0x801C84B7, 'input_player1_analog_y', u8);
 
     this.IsPressingButton();
+    this.GetAnalogStickX();
+    this.GetAnalogStickY();
 };
 
 var Player3 = function() {
     this.input_player3 = 0;
     mem.bindvar(this, 0x801C84E4, 'input_player3_A', u16);
     mem.bindvar(this, 0x801C84E5, 'input_player3_B', u16);
-    mem.bindvar(this, 0x801C84B6, 'input_player3_analog_x', u8);
-    mem.bindvar(this, 0x801C84B7, 'input_player3_analog_y', u8);
+    mem.bindvar(this, 0x801C84E6, 'input_player3_analog_x', u8);
+    mem.bindvar(this, 0x801C84E7, 'input_player3_analog_y', u8);
 
     this.IsPressingButton();
+    this.SetZero();
 };
 
 Player1.prototype.IsPressingButton = function(button) {
@@ -29,11 +32,11 @@ Player1.prototype.IsPressingButton = function(button) {
 }
 
 Player1.prototype.GetAnalogStickX = function() {
-    return input_player3_analog_x;
+    return input_player1_analog_x;
 }
 
 Player1.prototype.GetAnalogStickY = function() {
-    return input_player3_analog_y;
+    return input_player1_analog_y;
 }
 
 Player3.prototype.IsPressingButton = function(button) {
