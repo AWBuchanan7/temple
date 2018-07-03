@@ -1,5 +1,4 @@
 var Player1 = function() {
-    this.input_player1 = 0;
     mem.bindvar(this, 0x801C84B4, 'input_player1_A', u16);
     mem.bindvar(this, 0x801C84B5, 'input_player1_B', u16);
     mem.bindvar(this, 0x801C84B6, 'input_player1_analog_x', u8);
@@ -11,7 +10,6 @@ var Player1 = function() {
 };
 
 var Player3 = function() {
-    this.input_player3 = 0;
     mem.bindvar(this, 0x801C84E4, 'input_player3_A', u16);
     mem.bindvar(this, 0x801C84E5, 'input_player3_B', u16);
     mem.bindvar(this, 0x801C84E6, 'input_player3_analog_x', u8);
