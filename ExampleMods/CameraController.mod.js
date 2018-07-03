@@ -1,15 +1,3 @@
-Duktape.modSearch = function (id) {
-    var res = fs.readFile('C:/Users/Walker/OneDrive/Games/SuperSaix Mod Manager/Util/Ocarina of Time/Scripts/Game/' + id + '.js');
-    return res.toString();
-}
-
-var CAMERA = require('Camera');
-const camera = CAMERA.GameCamera();
-var INPUT = require('Input');
-const player1 = INPUT.Player1();
-const player3 = INPUT.Player3();
-const button = require('Button');
-
 var rotation_amount = 768;
 var roll_amount = 6;
 
