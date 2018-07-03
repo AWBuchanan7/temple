@@ -17,6 +17,8 @@ var Player3 = function() {
     mem.bindvar(this, 0x801C84E6, 'input_player3_analog_x', u8);
     mem.bindvar(this, 0x801C84E7, 'input_player3_analog_y', u8);
 
+    this.GetAnalogStickX();
+    this.GetAnalogStickY();
     this.IsPressingButton();
     this.SetZero();
 };
@@ -47,6 +49,14 @@ Player3.prototype.IsPressingButton = function(button) {
     }
     
     return false;    
+}
+
+Player3.prototype.GetAnalogStickX = function() {
+    return input_player3_analog_x;
+}
+
+Player3.prototype.GetAnalogStickY = function() {
+    return input_player3_analog_y;
 }
 
 Player3.prototype.SetZero = function() {
