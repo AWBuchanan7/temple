@@ -5,9 +5,9 @@ var Player1 = function() {
     mem.bindvar(this, 0x801C84B6, 'input_player1_analog_x', u8);
     mem.bindvar(this, 0x801C84B7, 'input_player1_analog_y', u8);
 
-    this.IsPressingButton();
     this.GetAnalogStickX();
     this.GetAnalogStickY();
+    this.IsPressingButton();
 };
 
 var Player3 = function() {
