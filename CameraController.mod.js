@@ -1,7 +1,7 @@
 console.log('Camera Control loaded.')
 
 Duktape.modSearch = function (id) {
-    var res = fs.readFile('C:/Users/Walker/OneDrive/Games/SuperSaix Mod Manager/Util/Ocarina of Time/Scripts/' + id + '.js');
+    var res = fs.readFile('C:/Users/Walker/OneDrive/Games/SuperSaix Mod Manager/Util/Ocarina of Time/Scripts/Game/' + id + '.js');
     return res.toString();
 }
 
