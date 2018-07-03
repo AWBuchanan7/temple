@@ -10,6 +10,6 @@ var Buttons = function() {
     this.Z = 2000;
 }
 
-exports.ButtonMap = function() {
+module.exports = function() {
     return new Buttons();
 }
