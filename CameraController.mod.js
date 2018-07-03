@@ -16,7 +16,6 @@ const buttons = INPUT.ButtonMap();
 var rotation = camera.camera_rotation;
 var rotation_amount = 768;
 
-
 exports.Mod = function() {
     if ((!player1.IsPressingButton(buttons.z_button)) && camera.IsFollowingLink()) {
         
