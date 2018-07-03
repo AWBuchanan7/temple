@@ -4,6 +4,7 @@ Duktape.modSearch = function (id) {
 }
 
 var CAMERAMOD = require('CameraController.mod');
+console.log('Camera Control loaded.')
 
 while (true) {
   CAMERAMOD.Mod();
