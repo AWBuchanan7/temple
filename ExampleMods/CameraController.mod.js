@@ -10,7 +10,6 @@ const player1 = INPUT.Player1();
 const player3 = INPUT.Player3();
 const button = require('Button');
 
-
 var rotation_amount = 768;
 var roll_amount = 6;
 
