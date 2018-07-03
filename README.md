@@ -1,5 +1,7 @@
 # Temple
-A JS library for modding Ocarina of Time.
+A JS library for modding Ocarina of Time with Project64.
+
+Please feel free to open an issue if you have problems! Or, if you are a hacker please feel free to contribute or to open an issue to get in touch with me to share information about the game! Anything helps!
 
 ## Usage
 Grab the latest version of Project64 and include the Temple files in your "./Project64/Scripts/" directory. The scripts should be available under the 'Debugger' menu at the 'Scripts' option.
