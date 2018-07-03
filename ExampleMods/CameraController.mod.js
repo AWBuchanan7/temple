@@ -1,6 +1,13 @@
+/*
+ * Configurable variables.
+ */
 var rotation_amount = 768;
 var roll_amount = 6;
+var zoom_amount = 24;
 
+/*
+ * exports.Mod defines the main function of the mod. It is executed continuously during gameplay.
+ */
 exports.Mod = function() {
     if ((!player1.IsPressingButton(button.Z)) && camera.IsFollowingLink()) {
         
