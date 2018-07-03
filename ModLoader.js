@@ -12,10 +12,11 @@ var INPUT = require('Game/Input');
 const player1 = INPUT.Player1();
 const player3 = INPUT.Player3();
 const button = require('Game/Button');
+console.log('Temple loaded.');
 
 // Import Mods
 var CAMERAMOD = require('ExampleMods/CameraController.mod');
-console.log('Camera Control loaded.')
+console.log('Camera Control loaded.');
 
 // Run Mods
 while (true) {
