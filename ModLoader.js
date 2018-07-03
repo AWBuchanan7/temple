@@ -1,5 +1,7 @@
 Duktape.modSearch = function (id) {
+    // This seems to require an absolute path. We'll need a fix to use a relative path here though.
     var res = fs.readFile('C:/Users/Walker/OneDrive/Games/SuperSaix Mod Manager/Util/Ocarina of Time/Scripts/' + id + '.js');
+    //Some error handling would be nice.
     return res.toString();
 }
 
