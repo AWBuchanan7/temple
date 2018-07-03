@@ -1,5 +1,3 @@
-console.log('Camera Control loaded.')
-
 Duktape.modSearch = function (id) {
     var res = fs.readFile('C:/Users/Walker/OneDrive/Games/SuperSaix Mod Manager/Util/Ocarina of Time/Scripts/Game/' + id + '.js');
     return res.toString();
@@ -7,12 +5,12 @@ Duktape.modSearch = function (id) {
 
 var CAMERA = require('Camera');
 const camera = CAMERA.GameCamera();
-
 var INPUT = require('Input');
 const player1 = INPUT.Player1();
 const player3 = INPUT.Player3();
-
 const button = require('Button');
+
+console.log('Camera Control loaded.')
 
 var rotation = camera.camera_rotation;
 var rotation_amount = 768;
