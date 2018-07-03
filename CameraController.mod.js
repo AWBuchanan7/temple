@@ -1,12 +1,7 @@
 console.log('Camera Control loaded.')
 
 Duktape.modSearch = function (id) {
-    if (id == 'Camera') {
-        var res = fs.readFile('C:/Users/Walker/OneDrive/Games/SuperSaix Mod Manager/Util/Ocarina of Time/Scripts/Camera.js');
-    }
-    else if (id == 'Input') {
-        var res = fs.readFile('C:/Users/Walker/OneDrive/Games/SuperSaix Mod Manager/Util/Ocarina of Time/Scripts/Input.js');
-    }
+    var res = fs.readFile('C:/Users/Walker/OneDrive/Games/SuperSaix Mod Manager/Util/Ocarina of Time/Scripts/' + id + '.js');
     return res.toString();
 }
 
