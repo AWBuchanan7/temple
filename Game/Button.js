@@ -1,24 +1,27 @@
 var Buttons = function() {
-    this.C_RIGHT = 1;
-    this.C_LEFT = 2;
-    this.C_DOWN = 4;
-    this.C_UP = 8;
-    this.C_RIGHT_UP = 9;
-    this.C_RIGHT_DOWN = 5;
-    this.C_LEFT_UP = 10;
-    this.C_LEFT_DOWN = 6;
-    
-    this.A = 4000;
-    this.B = 8000;
-    this.Z = 2000;
-    this.R = 10;
-    this.L = 20;
-    this.START = 100;
+    var ButtonEnum = {
+        "C_RIGHT": { value:1, type:0x801C84E4 };
+        "C_LEFT": { value:2, type:0x801C84E4 };
+        "C_DOWN": { value:4, type:0x801C84E4 };
+        "C_UP":  { value:8, type:0x801C84E4 };
+        "C_RIGHT_UP": { value:9, type:0x801C84E4 };
+        "C_RIGHT_DOWN": { value:5, type:0x801C84E4 };
+        "C_LEFT_UP":  { value:10, type:0x801C84E4 };
+        "C_LEFT_DOWN": { value:6, type:0x801C84E4 };
 
-    this.D_RIGHT = 100;
-    this.D_UP = 800;
-    this.D_LEFT = 200;
-    this.D_DOWN = 400;
+        "A": { value:4000, type:0x801C84E4 };
+        "B": { value:8000, type:0x801C84E4 };
+        "Z": { value:2000, type:0x801C84E4 };
+        "R": { value:10, type:0x801C84E5 };
+        "L": { value:20, type:0x801C84E5 };
+        "START": { value:100, type:0x801C84E4 };
+
+        "D_RIGHT": { value:100, type:0x801C84E5 };
+        "D_UP": { value:800, type:0x801C84E5 };
+        "D_LEFT": { value:200, type:0x801C84E5 };
+        "D_DOWN": { value:400, type:0x801C84E5 };
+    }    
+    return Object.freeze(ButtonEnum)
 }
 
 module.exports = function() {
