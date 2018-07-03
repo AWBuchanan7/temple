@@ -24,16 +24,16 @@ exports.Mod = function() {
 
         if (player3.IsPressingButton(button.C_RIGHT_UP)) {
             camera.Roll_Up();
-            rotation += rotation_amount;
+            camera.Rotate_Right(rotation_amount);
         }
 
         if (player3.IsPressingButton(button.C_RIGHT)) {
-            rotation += rotation_amount;
+            camera.Rotate_Right(rotation_amount);
         }
 
         if (player3.IsPressingButton(button.C_RIGHT_DOWN)) {
             camera.Roll_Down();
-            rotation += rotation_amount;
+            camera.Rotate_Right(rotation_amount);
         }
 
         if (player3.IsPressingButton(button.C_DOWN)) {
@@ -41,21 +41,21 @@ exports.Mod = function() {
         }
 
         if (player3.IsPressingButton(button.C_LEFT_DOWN)) {
-            rotation -= rotation_amount;
+            camera.Rotate_Left(rotation_amount);
             camera.Roll_Down();
         }
 
         if (player3.IsPressingButton(button.C_LEFT)) {
-            rotation -= rotation_amount;
+            camera.Rotate_Left(rotation_amount);
         }
 
         if (player3.IsPressingButton(button.C_LEFT_UP)) {
-            rotation -= rotation_amount;
+            camera.Rotate_Left(rotation_amount);
             camera.Roll_Up();
         }
 
         player3.SetZero();
     }
 
-    camera.SyncRotation(rotation);
+    camera.SyncRotation(camera.camera_rotation);
 }
