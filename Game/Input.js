@@ -28,7 +28,6 @@ Player3.prototype.SetZero = function() {
 }
 
 exports.Player1 = function() {
-
     return new Player1();
 }
 
