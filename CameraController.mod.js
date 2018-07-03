@@ -11,46 +11,47 @@ const camera = CAMERA.GameCamera();
 var INPUT = require('Input');
 const player1 = INPUT.Player1();
 const player3 = INPUT.Player3();
-const buttons = INPUT.ButtonMap();
+
+const button = require('Button');
 
 var rotation = camera.camera_rotation;
 var rotation_amount = 768;
 
 exports.Mod = function() {
-    if ((!player1.IsPressingButton(buttons.z_button)) && camera.IsFollowingLink()) {
+    if ((!player1.IsPressingButton(button.Z)) && camera.IsFollowingLink()) {
         
-        if (player3.IsPressingButton(buttons.c_up)) {
+        if (player3.IsPressingButton(button.C_UP)) {
             camera.Roll_Up();
         }
 
-        if (player3.IsPressingButton(buttons.c_right_up)) {
+        if (player3.IsPressingButton(button.C_RIGHT_UP)) {
             camera.Roll_Up();
             rotation += rotation_amount;
         }
 
-        if (player3.IsPressingButton(buttons.c_right)) {
+        if (player3.IsPressingButton(button.C_RIGHT)) {
             rotation += rotation_amount;
         }
 
-        if (player3.IsPressingButton(buttons.c_right_down)) {
+        if (player3.IsPressingButton(button.C_RIGHT_DOWN)) {
             camera.Roll_Down();
             rotation += rotation_amount;
         }
 
-        if (player3.IsPressingButton(buttons.c_down)) {
+        if (player3.IsPressingButton(button.C_DOWN)) {
             camera.Roll_Down();
         }
 
-        if (player3.IsPressingButton(buttons.c_left_down)) {
+        if (player3.IsPressingButton(button.C_LEFT_DOWN)) {
             rotation -= rotation_amount;
             camera.Roll_Down();
         }
 
-        if (player3.IsPressingButton(buttons.c_left)) {
+        if (player3.IsPressingButton(button.C_LEFT)) {
             rotation -= rotation_amount;
         }
 
-        if (player3.IsPressingButton(buttons.c_left_up)) {
+        if (player3.IsPressingButton(button.C_LEFT_UP)) {
             rotation -= rotation_amount;
             camera.Roll_Up();
         }
