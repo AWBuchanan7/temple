@@ -16,7 +16,7 @@ Duktape.modSearch = function (id) {
  */
 
 // Search the Temple directory
-var templeDir = fs.readdir(residence + 'Game/');
+var templeDir = fs.readdir(residence + 'Temple/');
 var Temple = {};
 
 // If the Temple directory read didn't fail
@@ -24,7 +24,7 @@ if (templeDir != false) {
     //For each Subtemple found
     templeDir.foreach(function(file, index) {
         // Load the Subtemple
-        var SubTemple = require('Game/' + file);
+        var SubTemple = require('Temple/' + file);
         // Register the Subtemple
         Temple[SubTemple.Name] = SubTemple.Function;
     });
