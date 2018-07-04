@@ -1,4 +1,10 @@
 /*
+ * This may provide some info to help fix the Z-Targeting bugs:
+ * https://wiki.cloudmodding.com/oot/Mod:Play_As_Z-Targeted_(Debug)
+ *
+ */
+
+/*
  * "Magic" number to convert the rotation of the resting camera to
  * the rotation of the camera's target.
  */
