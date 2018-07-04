@@ -1,4 +1,6 @@
-
+/*
+ * Refer to: https://wiki.cloudmodding.com/oot/Link_Animations
+ */
 
 var Link = function() {
   // Link's tunic's color 801DAB6C 00??
