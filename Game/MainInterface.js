@@ -2,10 +2,10 @@
  * Refer to: https://wiki.cloudmodding.com/oot/Cheat:Interface
  */
 
-var Interface = function() {
+var GameInterface = function() {
 
 };
 
-exports.MainInterface = function() {
-    return new Interface();
+exports.GameInterface = function() {
+    return new GameInterface();
 }
