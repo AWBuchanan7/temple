@@ -23,7 +23,7 @@ exports.Mod = function() {
         // Adjust the roll of the camera around Link.
         Roll();
         // Adjust the horizontal rotation of the camera around Link.
-        Rotate();
+        rotation = Rotate();
         // Synchronize the camera's rotation to the adjusted rotation.
         Temple[GameCamera].SyncRotation(rotation);
     }    
@@ -50,6 +50,7 @@ function Rotate() {
             rotation_sensitivity = 264;
         }
     }
+    return rotation;
 }
 
 /*
