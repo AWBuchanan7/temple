@@ -56,8 +56,9 @@ function Rotate() {
 /*
  * Function to adjust the roll (focused vertical rotation) value of the game camera around Link based on the
  * third player's analog stick's Y-axis value. Currently has a rudimentary "sensitivity" check based on magic
- * numbers. Disabled until I can sort out certain glitches with the roll value locking in and/or entering invalid
- * states around Link that harshly disrupts gameplay. 
+ * numbers. Disabled until I can sort out certain glitches with the roll value locking in and generally
+ * entering invalid states around Link that harshly disrupts gameplay when Link traverses the Y-axis via slopes
+ * while rolling the camera via this method.
  *
  */
 function Roll() {
