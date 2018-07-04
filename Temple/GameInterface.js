@@ -8,7 +8,7 @@
  * Refer to: https://wiki.cloudmodding.com/oot/Cheat:Interface
  */
 
-// magic meter size.
+// magic meter size. (is this NTSC 1.0?)
 // D01C84B4 0001
 // 8011B9C5 0000
 // D01C84B4 0001
