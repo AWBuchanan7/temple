@@ -1,3 +1,9 @@
+/*
+ *
+ * THIS CLASS TO BE DEVELOPED
+ *
+ */
+
 // https://wiki.cloudmodding.com/oot/Cheat:Items
 
 var Items = function() {
