@@ -1,4 +1,8 @@
-
+/*
+ *
+ * THIS CLASS TO BE DEVELOPED
+ *
+ */
 
 var Navi = function() {
  /*
