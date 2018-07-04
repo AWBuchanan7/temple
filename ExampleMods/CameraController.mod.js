@@ -1,4 +1,12 @@
 /*
+ * Imports
+ */
+var ButtonMap = Temple[ButtonMap];
+var Player1 = Temple[Player1];
+var Player3 = Temple[Player3];
+var GameCamera = Temple[GameCamera];
+
+/*
  * "Magic" numbers for configuring the camera's rotation and roll around Link, and the sensitivity
  * of the camera's response to inputs that change these values.
  *
@@ -19,13 +27,13 @@ var rolls = 100;
  */
 exports.Mod = function() {
     // If Player 1 is not holding the Z button (see: Z-Targeting) and the camera is actively following Link
-    if ((!Temple[Player1].IsPressingButton(Temple[ButtonMap].Z)) && Temple[GameCamera].IsFollowingLink()) {
+    if ((!Player1.IsPressingButton(ButtonMap.Z)) && GameCamera.IsFollowingLink()) {
         // Adjust the roll of the camera around Link.
         Roll();
         // Adjust the horizontal rotation of the camera around Link.
         rotation = Rotate();
         // Synchronize the camera's rotation to the adjusted rotation.
-        Temple[GameCamera].SyncRotation(rotation);
+        GameCamera.SyncRotation(rotation);
     }    
 }
 
@@ -35,7 +43,7 @@ exports.Mod = function() {
  *
  */
 function Rotate() {
-    var X = Temple[Player3].GetAnalogStickX();
+    var X = Player3.GetAnalogStickX();
 
     if (X > 128) {
         rotation_sensitivity--;
@@ -56,25 +64,27 @@ function Rotate() {
 /*
  * Function to adjust the roll (focused vertical rotation) value of the game camera around Link based on the
  * third player's analog stick's Y-axis value. Currently has a rudimentary "sensitivity" check based on magic
- * numbers. Disabled until I can sort out certain glitches with the roll value locking in and generally
- * entering invalid states around Link that harshly disrupts gameplay when Link traverses the Y-axis via slopes
- * while rolling the camera via this method.
+ * numbers.
+ * 
+ * Disabled until I can sort out certain glitches with the roll value locking in and generally entering invalid
+ * states around Link that harshly disrupts gameplay when Link traverses the Y-axis via slopes and climbing
+ * while/after rolling the camera via this method.
  *
  */
 function Roll() {
-    var Y = Temple[Player3].GetAnalogStickY();
+    var Y = Player3.GetAnalogStickY();
 
     // if (Y > 128) {
     //     roll_sensitivity--;
     //     if ((roll_sensitivity % roll_sensitivity_habit == 0) && rolls > 85) {
-    //         Temple[GameCamera].Roll_Down(1);
+    //         GameCamera.Roll_Down(1);
     //         rolls--;
     //         roll_sensitivity = 264;
     //     }
     // } else if (Y < 128 && Y > 5) {    
     //     roll_sensitivity++;
     //     if ((roll_sensitivity % roll_sensitivity_habit == 0) && rolls < 135) {
-    //         Temple[GameCamera].Roll_Up(1);
+    //         GameCamera.Roll_Up(1);
     //         rolls++;
     //         roll_sensitivity = 264;
     //     }
