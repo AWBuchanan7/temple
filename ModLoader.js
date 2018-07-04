@@ -1,5 +1,13 @@
+/* ===================
+ * == Configuration ==
+ * ===================
+ */
 var residence = 'C:/Users/Walker/OneDrive/Games/SuperSaix Mod Manager/Util/Ocarina of Time/Scripts/';
 
+/* =======================
+ * == Define Mod Search ==
+ * =======================
+ */
 Duktape.modSearch = function (id) {
     // This seems to require an absolute path. We'll need a fix to use a relative path here though.
     console.log('Import: ' + residence + id + '.js');
@@ -11,8 +19,9 @@ Duktape.modSearch = function (id) {
     return res.toString();
 }
 
-/*
+/* ===================
  * == Import Temple ==
+ * ===================
  */
 
 // Search the Temple directory
@@ -28,19 +37,31 @@ if (templeDir != false) {
         // Register the Subtemple
         Temple[SubTemple.Name] = SubTemple.Function;
     });
+
+    const ButtonMap = 'ButtonMap';
+    const GameCamera = 'GameCamera';
+    const Player1 = 'Player1';
+    const Player3 = 'Player3';
+} else {
+    console.log('Failed to load Temple.');
+    debug.breakhere();
 }
 
-console.log('Temple loaded.');
+console.log('Temple loaded successfully.');
 
-/*
+/* =================
  * == Import Mods ==
+ * =================
  */
 var CAMERAMOD = require('ExampleMods/CameraController.mod');
 console.log('Camera Control loaded.');
 
-/*
+console.log('All temple mods loaded successfully.');
+
+/* ==============
  * == Run Mods ==
+ * ==============
  */
 while (true) {
-  CAMERAMOD.Mod();
+    CAMERAMOD.Mod();
 }
