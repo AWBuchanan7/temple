@@ -24,6 +24,10 @@ var Buttons = function() {
     return Object.freeze(ButtonEnum)
 }
 
+exports.Name = function() {
+    return "ButtonMap";
+}
+
 exports.ButtonMap = function() {
     return new Buttons();
 }
