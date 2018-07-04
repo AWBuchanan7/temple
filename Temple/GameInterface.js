@@ -17,9 +17,13 @@
 
 
 var GameInterface = function() {
-
+    console.log("More to come.")
 };
 
-exports.GameInterface = function() {
+exports.Name = function() {
+    return "GameInterface";
+}
+
+exports.Function = function() {
     return new GameInterface();
 }

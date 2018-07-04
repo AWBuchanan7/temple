@@ -46,17 +46,17 @@
 var ItemSlot = function() {
   mem.bindvar(this, 0x80118444, 'slot_1', u8); // deku stick slot
   mem.bindvar(this, 0x80118445, 'slot_2', u8); // deku nut slot
-  mem.bindvar(this, 0x80118446, 'slot_3', u8; // bomb slot
+  mem.bindvar(this, 0x80118446, 'slot_3', u8); // bomb slot
   mem.bindvar(this, 0x80118447, 'slot_4', u8); // arrow slot
   
   mem.bindvar(this, 0x80118448, 'slot_5', u8); // fire arrow slot
   mem.bindvar(this, 0x80118449, 'slot_6', u8); // din's fire slot
-  mem.bindvar(this, 0x8011844A, 'slot_7', u8; // slingshot slot
+  mem.bindvar(this, 0x8011844A, 'slot_7', u8); // slingshot slot
   mem.bindvar(this, 0x8011844B, 'slot_8', u8); // ocarina slot
   
   mem.bindvar(this, 0x8011844C, 'slot_9A', u8); // hookshot slot
   mem.bindvar(this, 0x8011844D, 'slot_9B', u8); // longshot slot
-  mem.bindvar(this, 0x8011844E, 'slot_10', u8; // ice arrow slot
+  mem.bindvar(this, 0x8011844E, 'slot_10', u8); // ice arrow slot
   mem.bindvar(this, 0x8011844F, 'slot_11', u8); // farore slot
   
   mem.bindvar(this, 0x080118450, 'slot_12', u8); // boomerang slot

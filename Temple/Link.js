@@ -26,6 +26,10 @@ var Link = function() {
 };
 
 
-exports.Link = function() {
+exports.Name = function() {
+  return "Link";
+}
+
+exports.Function = function() {
     return new Link();
 }

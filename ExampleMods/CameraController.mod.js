@@ -1,10 +1,10 @@
 /*
  * Imports
  */
-var ButtonMap = Temple[ButtonMap];
-var Player1 = Temple[Player1];
-var Player3 = Temple[Player3];
-var GameCamera = Temple[GameCamera];
+var ButtonMap = Temple['ButtonMap']();
+var Player1 = Temple['Player1']();
+var Player3 = Temple['Player3']();
+var GameCamera = Temple['GameCamera']();
 
 /*
  * "Magic" numbers for configuring the camera's rotation and roll around Link, and the sensitivity
@@ -18,6 +18,7 @@ var roll_sensitivity = 264;
 var roll_sensitivity_habit = 31;
 var rolls = 100;
 
+console.log('Begin Camera Mod')
 /*
  * The exports.Mod() function defines the main function of a Temple-based mod. It is executed continuously
  * during gameplay. This particular mod enables the third player's controller to operate the game's camera

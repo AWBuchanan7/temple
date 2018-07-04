@@ -21,8 +21,8 @@ var Items = function() {
         "BOW_LIGHT" : 0x0012,
         
         // Ocarina
-        "OCARINA_FAIRY" : 0x0007
-        "OCARINA_TIME" : 0x0008
+        "OCARINA_FAIRY" : 0x0007,
+        "OCARINA_TIME" : 0x0008,
         
         // Hookshot
         "HOOKSHOT" : 0x000A,
@@ -57,6 +57,10 @@ var Items = function() {
     return Object.freeze(ItemEnum)
 }
 
-exports.ItemMap = function() {
+exports.Name = function() {
+    return "ItemMap";
+}
+
+exports.Function = function() {
     return new Items();
 }

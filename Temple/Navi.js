@@ -16,6 +16,11 @@ var Navi = function() {
 };
 
 
-exports.Navi = function() {
+
+exports.Name = function() {
+    return "Navi";
+}
+
+exports.Function = function() {
     return new Navi();
 }
