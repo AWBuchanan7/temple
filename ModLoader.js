@@ -11,35 +11,36 @@ Duktape.modSearch = function (id) {
     return res.toString();
 }
 
-// Import Temple
+/*
+ * == Import Temple ==
+ */
 
-// --Old Way--
-// var CAMERA = require('Game/Camera');
-// const camera = CAMERA.GameCamera();
-// var INPUT = require('Game/Input');
-// const player1 = INPUT.Player1();
-// const player3 = INPUT.Player3();
-// var BUTTON = require('Game/Button');
-// --------
-
-
+// Search the Temple directory
 var templeDir = fs.readdir(residence + 'Game/');
 var Temple = {};
 
+// If the Temple directory read didn't fail
 if (templeDir != false) {
-    templeDir.foreach(function(file, index) { 
+    //For each Subtemple found
+    templeDir.foreach(function(file, index) {
+        // Load the Subtemple
         var SubTemple = require('Game/' + file);
+        // Register the Subtemple
         Temple[SubTemple.Name] = SubTemple.Function;
     });
 }
 
 console.log('Temple loaded.');
 
-// Import Mods
+/*
+ * == Import Mods ==
+ */
 var CAMERAMOD = require('ExampleMods/CameraController.mod');
 console.log('Camera Control loaded.');
 
-// Run Mods
+/*
+ * == Run Mods ==
+ */
 while (true) {
   CAMERAMOD.Mod();
 }
