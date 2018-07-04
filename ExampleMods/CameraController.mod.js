@@ -8,15 +8,15 @@ var rolls = 100;
  */
 exports.Mod = function() {
     // If Z-Targeting isn't active and the camera is following Link
-    if ((!player1.IsPressingButton(button.Z)) && camera.IsFollowingLink()) {
+    if ((!Temple['Player1'].IsPressingButton(Temple['ButtonMap'].Z)) && Temple['GameCamera'].IsFollowingLink()) {
         Roll();
         Rotate();
-        camera.SyncRotation(rotation);
+        Temple['GameCamera'].SyncRotation(rotation);
     }    
 }
 
 function Rotate() {
-    var X = player3.GetAnalogStickX();
+    var X = Temple['Player3'].GetAnalogStickX();
 
     if (X > 128) {
         rotation_sensitivity--;
@@ -34,19 +34,19 @@ function Rotate() {
 }
 
 function Roll() {
-    // var Y = player3.GetAnalogStickY();
+    // var Y = Temple['Player3'].GetAnalogStickY();
 
     // if (Y > 128) {
     //     roll_sensitivity--;
     //     if ((roll_sensitivity % 31 == 0) && rolls > 85) {
-    //         camera.Roll_Down(1);
+    //         Temple['GameCamera'].Roll_Down(1);
     //         rolls--;
     //         roll_sensitivity = 264;
     //     }
     // } else if (Y < 128 && Y > 5) {    
     //     roll_sensitivity++;
     //     if ((roll_sensitivity % 31 == 0) && rolls < 135) {
-    //         camera.Roll_Up(1);
+    //         Temple['GameCamera'].Roll_Up(1);
     //         rolls++;
     //         roll_sensitivity = 264;
     //     }
