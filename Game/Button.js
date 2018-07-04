@@ -28,6 +28,6 @@ exports.Name = function() {
     return "ButtonMap";
 }
 
-exports.ButtonMap = function() {
+exports.Function = function() {
     return new Buttons();
 }
