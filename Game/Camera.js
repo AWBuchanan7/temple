@@ -56,6 +56,10 @@ Camera.prototype.Zoom_Out = function(zoomAmount) {
     this.camera_zoom -= zoomAmount;
 }
 
-exports.GameCamera = function() {
+exports.Name = function() {
+    return "GameCamera";
+}
+
+exports.Function = function() {
     return new Camera();
 }
