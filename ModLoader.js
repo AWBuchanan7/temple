@@ -11,7 +11,9 @@ const camera = CAMERA.GameCamera();
 var INPUT = require('Game/Input');
 const player1 = INPUT.Player1();
 const player3 = INPUT.Player3();
-const button = require('Game/Button');
+var BUTTON = require('Game/Button');
+
+var button = BUTTON.ButtonMap();
 console.log('Temple loaded.');
 
 // Import Mods

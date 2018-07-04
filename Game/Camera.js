@@ -2,7 +2,7 @@
  * "Magic" number to convert the rotation of the resting camera to
  * the rotation of the camera's target.
  */
-var REST_TARGET_CONVERSION = 32767; 
+var REST_TARGET_CONVERSION = 32768; 
 
 var Camera = function() {
     mem.bindvar(this, 0x801C8680, 'camera_context', u16);
@@ -13,26 +13,7 @@ var Camera = function() {
     mem.bindvar(this, 0x801C8722, 'camera_rotation', u16);
     mem.bindvar(this, 0x801C86C4, 'camera_unknown', u32);
     mem.bindvar(this, 0x81106BEC, 'camera_zoom', u16);
-       
-    this.IsFollowingLink();
-    this.Roll_Up(); 
-    this.Roll_Down();
-    this.Rotate_Right();
-    this.Rotate_Left();
-    this.SyncRotation();
-    this.Zoom_In();
-    this.Zoom_Out();
 };
-
-Camera.prototype.Rotate_Right = function(rotation) {
-    this.camera_rotation += rotation; 
-    this.SyncRotation(this.camera_rotation);
-}
-
-Camera.prototype.Rotate_Left = function(rotation) {
-    this.camera_rotation -= rotation; 
-    this.SyncRotation(this.camera_rotation);
-}
 
 //sync the camera rotations
 Camera.prototype.SyncRotation = function(rotation) {
@@ -54,11 +35,23 @@ Camera.prototype.IsFollowingLink = function() {
 }
 
 Camera.prototype.Roll_Up = function(rollAmount) {
-    this.camera_roll += rollAmount
+    if (this.camera_roll < 0x431E) {
+        this.camera_roll += rollAmount
+    }
+    // Limit the camera roll to non-glitchy values
+    if (this.camera_roll > 0x4310) {
+        this.camera_roll = 0x4310
+    }
 }
 
 Camera.prototype.Roll_Down = function(rollAmount) {
-    this.camera_roll -= rollAmount
+    if (this.camera_roll > 0x4228) {
+        this.camera_roll -= rollAmount
+    }
+    // Limit the camera roll to non-glitchy values
+    if (this.camera_roll < 0x4228 ) {
+        this.camera_roll = 0x4228
+    }
 }
 
 Camera.prototype.Zoom_In = function(zoomAmount) {

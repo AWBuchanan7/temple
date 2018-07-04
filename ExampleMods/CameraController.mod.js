@@ -1,54 +1,45 @@
 /*
  * Configurable variables.
  */
-var rotation_amount = 864;
+var rotation_amount = 512;
 var roll_amount = 6;
 var zoom_amount = 24;
+
+/*
+ * Non-configurable variables.
+ */
+
+var rotation = 128;
 
 /*
  * exports.Mod defines the main function of the mod. It is executed continuously during gameplay.
  */
 exports.Mod = function() {
+
     if ((!player1.IsPressingButton(button.Z)) && camera.IsFollowingLink()) {
-        
-        if (player3.IsPressingButton(button.C_UP)) {
-            camera.Roll_Up(roll_amount);
-        }
+        Roll();
+        Rotate();
+    } 
 
-        if (player3.IsPressingButton(button.C_RIGHT_UP)) {
-            camera.Roll_Up(roll_amount);
-            camera.Rotate_Right(rotation_amount);
-        }
+    camera.SyncRotation(rotation);
+}
 
-        if (player3.IsPressingButton(button.C_RIGHT)) {
-            camera.Rotate_Right(rotation_amount);
-        }
+function Rotate() {
+    var X = player3.GetAnalogStickX();
 
-        if (player3.IsPressingButton(button.C_RIGHT_DOWN)) {
-            camera.Roll_Down(roll_amount);
-            camera.Rotate_Right(rotation_amount);
-        }
-
-        if (player3.IsPressingButton(button.C_DOWN)) {
-            camera.Roll_Down(roll_amount);
-        }
-
-        if (player3.IsPressingButton(button.C_LEFT_DOWN)) {
-            camera.Rotate_Left(rotation_amount);
-            camera.Roll_Down(roll_amount);
-        }
-
-        if (player3.IsPressingButton(button.C_LEFT)) {
-            camera.Rotate_Left(rotation_amount);
-        }
-
-        if (player3.IsPressingButton(button.C_LEFT_UP)) {
-            camera.Rotate_Left(rotation_amount);
-            camera.Roll_Up(roll_amount);
-        }
-
-        player3.SetZero();
+    if (X > 128) {
+        rotation -= 1;
+    } else if (X < 128 && X > 5) {
+        rotation += 1;
     }
+}
 
-    camera.SyncRotation(camera.camera_rotation);
+function Roll() {
+    var Y = player3.GetAnalogStickY();
+
+    if (Y > 128) {
+        // camera.Roll_Down(1);
+    } else if (Y < 128 && Y > 5) {
+        // camera.Roll_Up(1);
+    }
 }

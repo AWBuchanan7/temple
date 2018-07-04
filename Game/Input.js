@@ -3,10 +3,6 @@ var Player1 = function() {
     mem.bindvar(this, 0x801C84B5, 'input_player1_B', u16);
     mem.bindvar(this, 0x801C84B6, 'input_player1_analog_x', u8);
     mem.bindvar(this, 0x801C84B7, 'input_player1_analog_y', u8);
-
-    this.GetAnalogStickX();
-    this.GetAnalogStickY();
-    this.IsPressingButton();
 };
 
 var Player3 = function() {
@@ -14,11 +10,6 @@ var Player3 = function() {
     mem.bindvar(this, 0x801C84E5, 'input_player3_B', u16);
     mem.bindvar(this, 0x801C84E6, 'input_player3_analog_x', u8);
     mem.bindvar(this, 0x801C84E7, 'input_player3_analog_y', u8);
-
-    this.GetAnalogStickX();
-    this.GetAnalogStickY();
-    this.IsPressingButton();
-    this.SetZero();
 };
 
 Player1.prototype.IsPressingButton = function(button) {
@@ -32,12 +23,17 @@ Player1.prototype.IsPressingButton = function(button) {
 }
 
 Player1.prototype.GetAnalogStickX = function() {
-    return input_player1_analog_x;
+    return this.input_player1_analog_x;
 }
 
 Player1.prototype.GetAnalogStickY = function() {
-    return input_player1_analog_y;
+    return this.input_player1_analog_y;
 }
+
+Player1.prototype.SetZero = function() {
+    this.input_player1_A = 0;
+}
+
 
 Player3.prototype.IsPressingButton = function(button) {
     if (button.type == 1) {
@@ -50,15 +46,15 @@ Player3.prototype.IsPressingButton = function(button) {
 }
 
 Player3.prototype.GetAnalogStickX = function() {
-    return input_player3_analog_x;
+    return this.input_player3_analog_x;
 }
 
 Player3.prototype.GetAnalogStickY = function() {
-    return input_player3_analog_y;
+    return this.input_player3_analog_y;
 }
 
 Player3.prototype.SetZero = function() {
-    this.input_player3 = 0;
+    this.input_player3_A = 0;
 }
 
 exports.Player1 = function() {
