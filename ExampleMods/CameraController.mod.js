@@ -1,6 +1,7 @@
 /*
  * "Magic" numbers for configuring the camera's rotation and roll around Link, and the sensitivity
  * of the camera's response to inputs that change these values.
+ *
  */
 var rotation_sensitivity = 264;
 var rotation_sensitivity_habit = 31;
