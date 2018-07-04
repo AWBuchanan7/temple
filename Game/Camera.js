@@ -35,23 +35,11 @@ Camera.prototype.IsFollowingLink = function() {
 }
 
 Camera.prototype.Roll_Up = function(rollAmount) {
-    if (this.camera_roll < 0x431E) {
-        this.camera_roll += rollAmount
-    }
-    // Limit the camera roll to non-glitchy values
-    if (this.camera_roll > 0x4310) {
-        this.camera_roll = 0x4310
-    }
+    this.camera_roll += rollAmount
 }
 
 Camera.prototype.Roll_Down = function(rollAmount) {
-    if (this.camera_roll > 0x4228) {
-        this.camera_roll -= rollAmount
-    }
-    // Limit the camera roll to non-glitchy values
-    if (this.camera_roll < 0x4228 ) {
-        this.camera_roll = 0x4228
-    }
+    this.camera_roll -= rollAmount
 }
 
 Camera.prototype.Zoom_In = function(zoomAmount) {
