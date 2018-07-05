@@ -1,4 +1,4 @@
-import { Button } from "./ButtonMap.ts";
+import { Button, ButtonType } from "./ButtonMap.ts";
 
 export enum Players {
     ONE = 1,
@@ -41,7 +41,11 @@ export class PlayerInput {
     }
 
     isPressingButton(button: Button) {
-
+        if (button.type == ButtonType.A) {
+            return this.input_player_A == button.value;
+        } else if (button.type == ButtonType.B) {
+            return this.input_player_B == button.value;
+        }
     }
 
     getAnalogStickX() {

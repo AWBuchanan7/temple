@@ -2,7 +2,7 @@
  * == Configuration ==
  * ===================
  */
-var residence = 'C:/Users/Walker/OneDrive/Games/SuperSaix Mod Manager/Util/Ocarina of Time/Scripts/';
+var RESIDENCE = 'C:/Users/Walker/OneDrive/Games/SuperSaix Mod Manager/Util/Ocarina of Time/Scripts/';
 
 /* =======================
  * == Define Mod Search ==
@@ -10,8 +10,8 @@ var residence = 'C:/Users/Walker/OneDrive/Games/SuperSaix Mod Manager/Util/Ocari
  */
 Duktape.modSearch = function (id) {
     // This seems to require an absolute path. We'll need a fix to use a relative path here though.
-    console.log('Import: ' + residence + id);
-    var res = fs.readFile(residence + id);   
+    console.log('Import: ' + RESIDENCE + id);
+    var res = fs.readFile(RESIDENCE + id);   
     
     if (res == false) { console.log('Import Failed.'); }
     
@@ -20,8 +20,10 @@ Duktape.modSearch = function (id) {
 }
 
 var CAMERAMOD = require('ExampleMods/CameraController.mod.js');
-var TEST = new CAMERAMOD.ModMain();
-TEST.Init(mem, u8, u16, u32);
+var CameraMod = new CAMERAMOD.ModMain();
+
+CameraMod.Init(mem, u8, u16, u32);
+
 while (true) {
-    TEST.Run();
+    CameraMod.Run();
 }
