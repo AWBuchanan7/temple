@@ -49,7 +49,7 @@ export class PlayerInput {
     }
 
     getAnalogStickX() {
-        return this.input_player_analog_y;
+        return this.input_player_analog_x;
     }
 
     getAnalogStickY() {
