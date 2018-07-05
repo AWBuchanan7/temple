@@ -56,7 +56,10 @@ export class GameDisplay {
   }
   
   static setDrawDistance(distance: number) {
-  
+    if (distance > 0xFFFF || distance < 0x0038) { return null; }
+    
+    this.drawdistance.a = (distance - 36);
+    this.drawdistance.b = distance;
   }
   
   
