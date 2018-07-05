@@ -1,4 +1,4 @@
-import { Button } from "../Temple/ButtonMap";
+import { ButtonMap } from "../Temple/ButtonMap";
 import { GameCamera } from "../Temple/Camera";
 import { PlayerInput } from "../Temple/Player";
 
@@ -34,7 +34,7 @@ export class ModMain {
      */
     Run() {
         // If Player 1 is not holding the Z button (see: Z-Targeting) and the camera is actively following Link
-        if ((!this.Player1.isPressingButton(Button.Z)) && GameCamera.isFollowingLink()) {
+        if ((!this.Player1.isPressingButton(ButtonMap.Z)) && GameCamera.isFollowingLink()) {
             // Adjust the roll of the camera around Link.
             this.Roll();
             // Adjust the horizontal rotation of the camera around Link.

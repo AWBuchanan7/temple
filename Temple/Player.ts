@@ -1,4 +1,4 @@
-import { Button, ButtonType } from "./ButtonMap";
+import { ButtonMap, ButtonType } from "./ButtonMap";
 
 export enum Players {
     ONE = 1,
@@ -40,7 +40,7 @@ export class PlayerInput {
         }
     }
 
-    isPressingButton(button: Button) {
+    isPressingButton(button: ButtonMap) {
         if (button.type == ButtonType.A) {
             return this.input_player_A == button.value;
         } else if (button.type == ButtonType.B) {

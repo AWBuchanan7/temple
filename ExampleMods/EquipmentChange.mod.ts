@@ -1,19 +1,21 @@
 import { ItemMap } from "../Temple/ItemMap";
-import { ItemSlot } from "../Temple/ItemSlots";
+import { ItemSlot } from "../Temple/ItemSlot";
 
 export class ModMain {
-    Slots: ItemSlot;
 
+    /*
+     * Initialize the mod.
+     */
     Init(mem, u8, u16, u32) {
-        this.Slots = new ItemSlot(mem, u8, u16, u32);
+        ItemSlot.initialize(mem, u8, u16, u32);
     }
 
     /*
-     *
+     * Run the initialized mod.
      */
     Run() {
-        this.Slots.slot_c_down = ItemMap.SWORD_KOKIRI;
-        this.Slots.slot_b = ItemMap.SLINGSHOT;
+        ItemSlot.SLOT_C_DOWN = ItemMap.SWORD_KOKIRI;
+        ItemSlot.SLOT_B = ItemMap.SLINGSHOT;
     }
 
 }
