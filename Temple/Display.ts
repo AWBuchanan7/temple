@@ -32,8 +32,8 @@ export class GameDisplay {
     // http://forum.pj64-emu.com/showthread.php?t=5389
     this.drawDistance = mem.bindvars({},
       [
-        [0x80048D7E , 'a', u16], // default value 3F4A, lower values increase the draw distance
-        [0x80048DAA, 'b', u16] // default value value 3F80, lower values increase the draw distance
+        [0x80048D7E , 'a', u16], // default value 3F4A, lower values increase the draw distance, try 3E80
+        [0x80048DAA, 'b', u16] // default value value 3F80, lower values increase the draw distance, try 3E80
       ]);
     
     this.widescreenRender = mem.bindvar(this, 0x80024A0A, 'widescreenRender', u16);
