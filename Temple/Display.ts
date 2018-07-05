@@ -13,6 +13,7 @@ export enum AspectRatio {
 export class GameDisplay {
 
   aspectRatio;
+  drawDistance;
   widescreenRender;
 
   static initialize(mem, u8, u16, u32) {
@@ -26,6 +27,13 @@ export class GameDisplay {
           [0x80188912, 'f', u16],
           [0x80188928, 'g', u16],
           [0x80188932, 'h', u16]
+      ]);
+    
+    // http://forum.pj64-emu.com/showthread.php?t=5389
+    this.drawDistance = mem.bindvars({},
+      [
+        [0x80048D7E , 'a', u16], // default value 3F4A, lower values increase the draw distance
+        [0x80048DAA, 'b', u16] // default value value 3F80, lower values increase the draw distance
       ]);
     
     this.widescreenRender = mem.bindvar(this, 0x80024A0A, 'widescreenRender', u16);
