@@ -14,6 +14,7 @@ export class GameDisplay {
 
   aspectRatio;
   drawDistance;
+  framerate;
   widescreenRender;
 
   static initialize(mem, u8, u16, u32) {
