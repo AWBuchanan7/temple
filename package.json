@@ -1,0 +1,22 @@
+{
+  "name": "temple",
+  "version": "1.0.0",
+  "description": "A JavaScript library for modding The Legend of Zelda: Ocarina of Time with Project64's debugger scripts.",
+  "main": "ModLoader.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AWBuchanan7/Temple.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AWBuchanan7/Temple/issues"
+  },
+  "homepage": "https://github.com/AWBuchanan7/Temple#readme",
+  "dependencies": {
+    "typescript": "^1.8.2"
+  }
+}
