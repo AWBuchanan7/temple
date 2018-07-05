@@ -9,7 +9,7 @@ Grab the latest version of Project64 and include the Temple files in your ".../P
 ## Objectives of Temple
 
 ### Scope
-Currently Temple provides a limited set of JavaScript objects for accessing the controller's input, controlling the game's camera and some other basic functionalities in a limited fashion. The goal is for Temple to, in broad strokes, expand to provide classes for modifying anything and everything in the game, from equipment and items to the game's interface, and so on.
+Currently Temple provides a limited set of objects for accessing the controller's input, controlling the game's camera and some other basic functionalities in a limited fashion. The goal is for Temple to, in broad strokes, expand to provide classes for modifying anything and everything in the game, from equipment and items to the game's interface, and so on.
 
 ### Versioning
 Temple currently targets the NTSC 1.0 version of Ocarina of Time. Though supporting other versions, such as the debug ROM, Master Quest, and even Majora's Mask is on our roadmap, these implementations will come in the distant future.
