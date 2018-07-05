@@ -26,12 +26,22 @@
 
 export class ItemSlot {
 
+  slot_c_right;
+  slot_c_down;
+  slot_c_left;
+  slot_b;
+
   slot_1;
   slot_2;
   slot_3;
   slot_4;
 
   constructor(mem, u8, u16, u32) {
+    mem.bindvar(this, 0x8011A63B, 'slot_c_right', u8);
+    mem.bindvar(this, 0x8011A63A, 'slot_c_down', u8);
+    mem.bindvar(this, 0x8011A639, 'slot_c_left', u8);
+    mem.bindvar(this, 0x8011A638, 'slot_b', u8);
+
     mem.bindvar(this, 0x80118444, 'slot_1', u8); // deku stick slot
     mem.bindvar(this, 0x80118445, 'slot_2', u8); // deku nut slot
     mem.bindvar(this, 0x80118446, 'slot_3', u8); // bomb slot

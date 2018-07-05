@@ -1,6 +1,6 @@
-import { Button } from "../Temple/ButtonMap.ts";
-import { GameCamera } from "../Temple/Camera.ts";
-import { PlayerInput } from "../Temple/Player.ts";
+import { Button } from "../Temple/ButtonMap";
+import { GameCamera } from "../Temple/Camera";
+import { PlayerInput } from "../Temple/Player";
 
 export class ModMain {
     /*

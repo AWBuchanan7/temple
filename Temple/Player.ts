@@ -1,4 +1,4 @@
-import { Button, ButtonType } from "./ButtonMap.ts";
+import { Button, ButtonType } from "./ButtonMap";
 
 export enum Players {
     ONE = 1,

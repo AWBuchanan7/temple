@@ -22,8 +22,13 @@ Duktape.modSearch = function (id) {
 var CAMERAMOD = require('ExampleMods/CameraController.mod.js');
 var CameraMod = new CAMERAMOD.ModMain();
 
+var EQUIPMOD = require('ExampleMods/EquipmentChange.mod.js');
+var EquipmentMod = new EQUIPMOD.ModMain();
+
 CameraMod.Init(mem, u8, u16, u32);
+EquipmentMod.Init(mem, u8, u16, u32);
 
 while (true) {
     CameraMod.Run();
+    // EquipmentMod.Run();
 }
