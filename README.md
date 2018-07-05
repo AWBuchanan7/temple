@@ -1,5 +1,5 @@
 # Temple
-A JavaScript library for modding The Legend of Zelda: Ocarina of Time with Project64's debugger scripts. Temple is in _very_ early stage development. Currently the actual implementation of Temple exists in the "./Temple/" directory. An early example mod that uses Temple is defined in the "./ExampleMods/" directory.
+A library for modding The Legend of Zelda: Ocarina of Time with TypeScript in Project64. Temple is in _very_ early stage development. Currently the actual implementation of Temple exists in the "./Temple/" directory. An early example mod that uses Temple is defined in the "./ExampleMods/" directory.
 
 Feel free to open an issue if you have problems! Or, if you are a hacker feel free to contribute or to open an issue to get in touch with me to share information about the game! Anything helps, even just Gameshark codes/memory addresses and what they do!
 
