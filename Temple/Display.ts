@@ -39,7 +39,7 @@ export class GameDisplay {
     this.widescreenRender = mem.bindvar(this, 0x80024A0A, 'widescreenRender', u16);
   }
   
-  static setRatio(ratio: AspectRatio) {
+  static setAspectRatio(ratio: AspectRatio) {
     switch(ratio) {
       case AspectRatio.16_9:
         this.widescreenRender = 0xFFFF;
@@ -53,6 +53,9 @@ export class GameDisplay {
       default:
       break;
     }
+  }
+  
+  static setDrawDistance(distance: number) {
   
   }
   
