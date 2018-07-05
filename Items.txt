@@ -1,182 +1,30 @@
-0005 - Din's Fire
-000D - Nayru's Love
-0013 - Nayru's Love
-0014 - Empty Bottle
-0015 - Red Potion
-0016 - Green Potion
-0017 - Blue Potion
-0018 - Fairy
-0019 - Fish
-001A - Milk
-001B - Letter in a Bottle
-001C - Blue Fire
-001D - Bug
-001E - Big Poe
-001F - Lon-Lon Milk (Half)
-0020 - Poe
-
-0021 - Weird Egg
-0022 - Chicken
-
-0023 - Zelda's Letter
-
-002C - Sold Out Sign
-002D - Pocket Egg
-002E - Pocket Cucco
-002F - Cojiro
-0030 - Old Mushroom
-0031 - Odd Potion
-0032 - Poachers Saw
-0034 - Prescription
-0035 - Eyeball Frog
-0036 - Eye Drops
-0037 - Claim Check
-0038 - Fire Arrow (Powered Up)
-0039 - Ice Arrow (Powered Up)
-003A - Light Arrow (Powered Up)
-
-003E - Kokiri Shield
-003F - Hylian Shield
-0040 - Mirror Shield
-0041 - Kokiri Tunic
-0042 - Goron Tunic
-0043 - Zora Tunic
-0044 - Kokiri Boots
-0045 - Iron Boots
-0046 - Hover Boots
-0047 - Bullet Bag (Holds 30)
-0048 - Bullet Bag (Holds 40)
-0049 - Bullet Bag (Holds 50)
-004A - Quiver (Holds 30)
-004B - Quiver (Holds 40)
-004C - Quiver (Holds 50)
-004D - Bomb Bag (Holds 20)
-004E - Bomb Bag (Holds 30)
-004F - Bomb Bag (Holds 40)
-0050 - Goron's Bracelet
-0051 - Silver Gauntlets
-0052 - Golden Gauntlets
-0053 - Silver Scale
-0054 - Golden Scale
-0055 - Giant's Knife (Broken)
-0056 - Bomb Bag? (Japanese Name)
-0057 - Bomb Bag 2? (Japanese Name)
-0058 - Sling Shot Bullets? (Japanese Name)
-0059 - Fishing Rod (Japanese Name)
-005A - Minuet of Forest
-005B - Bolero of Fire
-005C - Serenade of Water
-005D - Requiem of Spirit
-005E - Nocturne of Shadow
-005F - Prelude of Light
-0060 - Zelda's Lullaby
-0061 - Epona's Song
-0062 - Saria's Song
-0063 - Sun's Song
-0064 - Song of Time
-0065 - Song of Storms
-0066 - Forest Medallion
-0067 - Fire Medallion
-0068 - Water Medallion
-0069 - Spirit Medallion
-006A - Shadow Medallion
-006B - Light Medallion
-006C - Kokiri's Emerald
-006D - Goron's Ruby
-006E - Zora's Sapphire
-006F - Stone of Agony
-0070 - Gerudo's Card
-0071 - Gold Skulltula
-0072 - Piece of Heart
-0073 - ??? (Japanese Name)
-0074 - Big Key
-0075 - Compass
-0076 - Dungeon Map
-0077 - ??? (Japanese Name)
-0078 - ??? (Japanese Name)
-0079 - ??? (Japanese Name)
-007A - Biggoron's Sword (Glitched up Graphic)
-007B - Deku Rod(Glitched Up Graphics)
-007C - Deku Nut(Glitched Up Graphics)
-007D - ??? (Japanese Name) 
-007E - ??? (Japanese Name)
-007F - ??? (Japanese Name)
-0080 - ??? (Japanese Name)
-0081 - ??? (Japanese Name)
-0082 - ??? (Japanese Name)
-0083 - Letter in a Bottle w/ Blue Shade (Japanese Name)
-0084 - Quiver (Holds 20?) w/ Red Hue (Japanese Name)
-0085 - ??? (Japanese Name)
-0086 - ??? (Japanese Name)
-0087 - ??? (Japanese Name)
-0088 - ??? (Japanese Name)
-0089 - Haunted Wasteland (FPS Drop to 17 from here)
-008A - Gerudo's Fortress
-008B - Gerudo Valley
-008C - Lake Hylia
-008D - Lon Lon Ranch
-008E - Market (To Here)
-008F - Hyrule Field
-0090 - Death Mountain
-0091 - Kakariko Village
-0092 - Lost Woods
-0093 - Kokiri Forest
-0094 - Zora's Domain
-0095 - Milk (Glitched Up Graphics)
-0096 - Letter (Glitched Up Graphics)
-0097 - Blue Fire (Glitched Up Graphics)
-0098 - Bug (Glitched Up Graphics)
-0099 - Night Swarm?(Glitched Up Graphics)
-009A - Milk(1/2)(Glitched Up Graphics)
-009B - Light? (Glitched Up Graphic)
-009C - Strange Egg  (Glitched Up Graphics)
-009D - Chicken (Glitched Up Graphic)
-009E - Zeldas Letter (Glitched Up Graphic)
-009F - Fox Mask (Glitched Up Graphic)
-00A0 - Skull Mask (Glitched Up Graphic)
-00A1 - Rabbit Honor?(Glitched Up Graphic)
-00A2 - Goron Mask(Glitched Up Graphic)
-00A3 - Goron Mask Again (Glitched Up Graphic)
-00A4 - Zora Mask(Glitched Up Graphic)
-00A5 - Gerudo Mask (Glitched Up Graphic)
-00A6 - Mask of the Knowledge(Glitched Up Graphic)
-00A7 - Sells?(Glitched Up Graphic)
-00A8 - Egg(Glitched Up Graphic)
-00A9 - Kiki?? (Glitched Up Graphic)
-00AA - Whinnied?(Glitched Up Graphic)
-00AB - Mold (Glitched Up Graphic)
-00AC - Mold Drank? (Glitched Up Flashing Graphic)
-00AD - Would Saw?(Glitched Up Flashing Graphic)
-00AE - Goron Sword(Broken) (Glitched Up Flashing Graphic)
-00AF - Prescription (Glitched Up Graphic)
-00B0 - Glotz Frog (Glitched Up Graphic)
-00B1 - Eye drop (Glitched Up Graphic)
-00B2 - Certificate (Glitched Up Graphic)
-00B3 - Jap Text???? (Glitched Up Graphic)
-00B4 - Jap Text???? (Glitched Up Graphic)
-00B5 - Kokiri-sword(Glitched Up Graphic/Name)
-00B6 - Kokiri Sword Again(Glitched Up Graphic)
-00B7 - Master-Sword (Glitched Up Graphic)
-00B8 - Long Sword (Glitched Up Graphic)
-00B9 - Deku-sign (Glitched Up Graphic)
-00BA - Hylia-sign (Glitched Up Graphic)
-00BC - Kokiri-armament(Glitched Up Graphic)
-00BD - Goron-armament (Glitched Up Graphic)
-00BE - Zora-armament (Glitched Up Graphic)
-00BF - Leather boot (Glitched Up Graphic)
-00C0 - Iron boot (Glitched Up Graphic)
-00C1 - Hover boot (Glitched Up Graphic)
-00C2 - Ammunition pocket(30)(Glitched Up Flashing Graphic)
-00C3 - Ammunition pocket(40)(Glitched Up Graphic)
-00C4 - Ammunition pocket(50)(Glitched Up Graphic)
-00C5 - Cooks(30)(Glitched Up Flashing Graphic)
-00C6 - Cooks(40)(Glitched Up Flashing Graphic)
-00C7 - Cooks(50) (It Looks like an TV with no reception)
-00C8 - Bombs pocket(20)(Glitched Up Graphic)
-00C9 - Bombs pocket(30)(Glitched Up Graphic)
-00CA - Bombs pocket(40)(Glitched Up Graphic)
-00CB - Goron-bracelet(Glitched Up Graphic)
-00CC - Power glove (Glitched Up Graphic)
-00CD - Titanium glove (Glitched Up Graphic)
-00CE - Silver Scale (Glitched Up Graphic)
-00CF - Gold Scale (Glitched Up Graphic)
+$00 deku sticks		$01 deku nuts		$02 bombs
+$03 fairy bow		$04 fire arrow		$05 din's fire
+$06 fairy slingshot	$07 fairy ocarina	$08 ocarina of time
+$09 bombchus		$0A hookshot		$0B longshot
+$0C ice arrow		$0D farore's wind	$0E boomerang
+$0F lens of truth	$10 magic beans		$11 megaton hammer
+$12 light arrow		$13 nayru's love	$14 empty bottle
+$15 red potion		$16 green potion	$17 blue potion
+$18 fairy		$19 fish		$1A full lon lon milk
+$1B ruto's letter	$1C blue flame		$1D bugs
+$1E big poe		$1F half lon lon milk	$20 poe
+$21 weird egg		$22 chicken		$23 zelda's letter
+$24 keaton mask		$25 skull mask		$26 spooky mask
+$27 bunny hood		$28 goron mask		$29 zora mask
+$2A gerudo mask		$2B mask of truth	$2C sold out
+$2D pocket egg		$2E pocket cucco	$2F cojiro
+$30 odd mushroom	$31 odd potion		$32 poacher saw
+$33 broken goron sword	$34 prescription	$35 eyeball frog
+$36 eye drops		$37 claim check		$38 powered fire arrow
+$39 powered ice arrow	$3A powered light arrow	$3B kokiri sword
+$3C master sword	$3D giant's knife	$3E deku shield
+$3F hylian shield	$40 mirror shield	$41 kokiri tunic
+$42 goron tunic		$43 zora tunic		$44 kokiri boots
+$45 iron boots		$46 hover boots		$47 small bullet bag
+$48 medium bullet bag	$49 large bullet bag	$4A small quiver
+$4B medium quiver	$4C large quiver	$4D small bomb bag
+$4E medium bomb bag	$4F large bomb bag	$50 goron bracelet
+$51 silver gauntlets	$52 golden gauntlets	$53 silver scale
+$54 golden scale	$55 broken giants knife	$56 adult wallet
+$57 giant wallet	$58 deku seeds		$59 fishing rod
