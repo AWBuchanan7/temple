@@ -12,7 +12,7 @@ export class Rupee {
   color: RupeeType;
   value;
   
-  static GREEN = new Rupee(RupeeType.GREEN, 1);
+  // static GREEN = new Rupee(RupeeType.GREEN, 1);
   
   
     
@@ -21,7 +21,7 @@ export class Rupee {
    //$000E64E0  2  red rupee value
    //$000E64E2  2  purple rupee value
    //$000E64E4  2  orange rupee value
-  constructor(_color: RupeeType, _value: number) {
+  constructor(_color: RupeeType, _value: number, mem, u8, u16, u32) {
         this.color = _color;
         
         

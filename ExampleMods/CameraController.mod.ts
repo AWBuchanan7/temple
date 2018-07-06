@@ -26,7 +26,7 @@ export class ModMain {
     }
 
     /*
-     * The exports.Mod() function defines the main function of a Temple-based mod. It is executed continuously
+     * The ModMain.Run() function defines the main function of a Temple-based mod. It is executed continuously
      * during gameplay. This particular mod enables the third player's controller to operate the game's camera
      * as it follows Link, so that PC-users can configure a comfortable key/mouse bind with dynamic camera
      * controls, which are not available in normal gameplay.

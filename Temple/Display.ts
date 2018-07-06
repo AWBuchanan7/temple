@@ -5,17 +5,19 @@
  */
 
 export enum AspectRatio {
-  16_9 = 1,
-  21_9 = 2,
-  48_9 = 3
+  _16x9 = 1,
+  _21x9 = 2,
+  _48x9 = 3
 }
 
 export class GameDisplay {
 
-  aspectRatio;
-  drawDistance;
-  framerate;
-  widescreenRender;
+  static aspectRatio;
+  static drawDist_A;
+  static drawDist_B;
+  static framerate;
+  static widescreenRender;
+
 
   static initialize(mem, u8, u16, u32) {
     this.aspectRatio = mem.bindvars({},
@@ -31,36 +33,51 @@ export class GameDisplay {
       ]);
     
     // http://forum.pj64-emu.com/showthread.php?t=5389
-    this.drawDistance = mem.bindvars({},
+    mem.bindvars(this,
       [
-        [0x80048D7E , 'a', u16], // default value 3F4A, lower values increase the draw distance, try 3E80
-        [0x80048DAA, 'b', u16] // default value value 3F80, lower values increase the draw distance, try 3E80
+        [0x80048D7E , 'drawDist_A', u16], // default value 3F4A, lower values increase the draw distance, try 3E80
+        [0x80048DAA, 'drawDist_B', u16] // default value value 3F80, lower values increase the draw distance, try 3E80
       ]);
     
-    this.widescreenRender = mem.bindvar(this, 0x80024A0A, 'widescreenRender', u16);
+    mem.bindvar(this, 0x80024A0A, 'widescreenRender', u16);
+
+    mem.bindvar(this, 0x801C6FA1 , 'framerate', u8);
+
   }
   
   static setAspectRatio(ratio: AspectRatio) {
+    if (this.aspectRatio.c != 0x0000) {
     switch(ratio) {
-      case AspectRatio.16_9:
+      case AspectRatio._16x9:
         this.widescreenRender = 0xFFFF;
       break;
-      case AspectRatio.21_9:
-        this.widescreenRender = 0xFFFF;
+      case AspectRatio._21x9:
+        // this.widescreenRender = 0xFFFF;
+        this.aspectRatio.a = 0x0000;
+        this.aspectRatio.b = 0x0001;
+        this.aspectRatio.c = 0xBE08;
+        this.aspectRatio.d = 0xBB6C;
+        this.aspectRatio.e = 0x0000;
+        this.aspectRatio.f = 0x0001;
+        this.aspectRatio.g = 0xBE08;
+        this.aspectRatio.h = 0xBB6C;
       break;
-      case AspectRatio.48_9:
+      case AspectRatio._48x9:
         this.widescreenRender = 0xFFFF;
       break;
       default:
       break;
     }
   }
+  }
   
-  static setDrawDistance(distance: number) {
-    if (distance > 0xFFFF || distance < 0x0038) { return null; }
-    
-    this.drawdistance.a = (distance - 36);
-    this.drawdistance.b = distance;
+  static setDrawDistance(distance: number) {   
+    this.drawDist_A = distance
+    this.drawDist_B = distance;
+  }
+
+  static setFrameRate(rate: number) {
+      this.framerate = rate;
   }
   
   
