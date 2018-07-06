@@ -23,7 +23,7 @@ export class ModMain {
 
         if (this.cameraLoadedFlag) {
             GameDisplay.setFrameRate(0x02);
-            // GameDisplay.setDrawDistance(0x3E80);
+            GameDisplay.setDrawDistance(0x3E80);
         } else {
             if (GameCamera.isFollowingLink()) {
                 this.cameraLoadedFlag = true;

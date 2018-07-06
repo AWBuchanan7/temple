@@ -16,8 +16,6 @@ export class GameDisplay {
   static drawDist_A;
   static drawDist_B;
   static framerate;
-  static widescreenRender;
-
 
   static initialize(mem, u8, u16, u32) {
     this.aspectRatio = mem.bindvars({},
@@ -33,14 +31,12 @@ export class GameDisplay {
       ]);
     
     // http://forum.pj64-emu.com/showthread.php?t=5389
-    mem.bindvars(this,
+    mem.bindvars({},
       [
         [0x80048D7E , 'drawDist_A', u16], // default value 3F4A, lower values increase the draw distance, try 3E80
         [0x80048DAA, 'drawDist_B', u16] // default value value 3F80, lower values increase the draw distance, try 3E80
       ]);
     
-    mem.bindvar(this, 0x80024A0A, 'widescreenRender', u16);
-
     mem.bindvar(this, 0x801C6FA1 , 'framerate', u8);
 
   }
@@ -49,10 +45,8 @@ export class GameDisplay {
     if (this.aspectRatio.c != 0x0000) {
     switch(ratio) {
       case AspectRatio._16x9:
-        this.widescreenRender = 0xFFFF;
       break;
       case AspectRatio._21x9:
-        // this.widescreenRender = 0xFFFF;
         this.aspectRatio.a = 0x0000;
         this.aspectRatio.b = 0x0001;
         this.aspectRatio.c = 0xBE08;
@@ -63,7 +57,6 @@ export class GameDisplay {
         this.aspectRatio.h = 0xBB6C;
       break;
       case AspectRatio._48x9:
-        this.widescreenRender = 0xFFFF;
       break;
       default:
       break;
