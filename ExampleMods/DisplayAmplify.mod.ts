@@ -5,13 +5,20 @@ import { Link } from "../Temple/Link";
 export class ModMain {
 
     cameraLoadedFlag: boolean;
+    config;
 
-    Init(mem, u8, u16, u32) {
+    Init(mem, u8, u16, u32, _config) {
         GameDisplay.initialize(mem, u8, u16, u32);
         Link.initialize(mem, u8, u16, u32);
         this.cameraLoadedFlag = false;
+        this.config = JSON.parse(_config);
         
-        GameDisplay.setAspectRatio(AspectRatio._21x9);
+        if (this.config.aspect_ratio == "16:9") {
+            GameDisplay.setAspectRatio(AspectRatio._21x9);
+        } else if (this.config.aspect_ratio == "21:9") {
+            GameDisplay.setAspectRatio(AspectRatio._21x9);
+        }
+        
     }
 
     /*
@@ -21,17 +28,25 @@ export class ModMain {
      */
     Run() {
 
-        GameDisplay.setAspectRatio(AspectRatio._21x9);
+        if (this.config.aspect_ratio == "16:9") {
+            GameDisplay.setAspectRatio(AspectRatio._21x9);
+        } else if (this.config.aspect_ratio == "21:9") {
+            GameDisplay.setAspectRatio(AspectRatio._21x9);
+        }
 
         if (this.cameraLoadedFlag) {
 
-            if (Link.isCrawling()) {
-                GameDisplay.setFrameRate(0x03);
-            } else {
-                GameDisplay.setFrameRate(0x02);
+            if (this.config.framerate_enhance == "true") {
+                if (Link.isCrawling()) {
+                    GameDisplay.setFrameRate(0x03);
+                } else {
+                    GameDisplay.setFrameRate(0x02);
+                }
             }
             
-            GameDisplay.setDrawDistance(0x3E80);
+            if (this.config.draw_distance_enhance == "true") {
+                GameDisplay.setDrawDistance(0x3E80);
+            }
 
         } else {
 

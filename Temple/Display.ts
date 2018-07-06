@@ -43,25 +43,33 @@ export class GameDisplay {
   
   static setAspectRatio(ratio: AspectRatio) {
     if (this.aspectRatio.c != 0x0000) {
-    switch(ratio) {
-      case AspectRatio._16x9:
-      break;
-      case AspectRatio._21x9:
-        this.aspectRatio.a = 0x0000;
-        this.aspectRatio.b = 0x0001;
-        this.aspectRatio.c = 0xBE08;
-        this.aspectRatio.d = 0xBB6C;
-        this.aspectRatio.e = 0x0000;
-        this.aspectRatio.f = 0x0001;
-        this.aspectRatio.g = 0xBE08;
-        this.aspectRatio.h = 0xBB6C;
-      break;
-      case AspectRatio._48x9:
-      break;
-      default:
-      break;
+      switch(ratio) {
+        case AspectRatio._16x9:
+          this.aspectRatio.a = 0x0000;
+          this.aspectRatio.b = 0x0001;
+          this.aspectRatio.c = 0xF96A;
+          this.aspectRatio.d = 0xBB6C;
+          this.aspectRatio.e = 0x0000;
+          this.aspectRatio.f = 0x0001;
+          this.aspectRatio.g = 0xF96A;
+          this.aspectRatio.h = 0xBB6C;
+        break;
+        case AspectRatio._21x9:
+          this.aspectRatio.a = 0x0000;
+          this.aspectRatio.b = 0x0001;
+          this.aspectRatio.c = 0xBE08;
+          this.aspectRatio.d = 0xBB6C;
+          this.aspectRatio.e = 0x0000;
+          this.aspectRatio.f = 0x0001;
+          this.aspectRatio.g = 0xBE08;
+          this.aspectRatio.h = 0xBB6C;
+        break;
+        case AspectRatio._48x9:
+        break;
+        default:
+        break;
+      }
     }
-  }
   }
   
   static setDrawDistance(distance: number) {   
