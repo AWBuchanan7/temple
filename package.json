@@ -18,5 +18,10 @@
   "homepage": "https://github.com/AWBuchanan7/Temple#readme",
   "dependencies": {
     "typescript": "^1.8.2"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.3",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-typescript": "^0.8.0"
   }
 }
