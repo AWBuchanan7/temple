@@ -7,12 +7,13 @@ export class ModMain {
     cameraLoadedFlag: boolean;
     config;
 
+
     Init(mem, u8, u16, u32, _config) {
         GameDisplay.initialize(mem, u8, u16, u32);
         Link.initialize(mem, u8, u16, u32);
         this.cameraLoadedFlag = false;
         this.config = JSON.parse(_config);
-        
+
         if (this.config.aspect_ratio == "16:9") {
             GameDisplay.setAspectRatio(AspectRatio._21x9);
         } else if (this.config.aspect_ratio == "21:9") {
@@ -28,13 +29,13 @@ export class ModMain {
      */
     Run() {
 
-        if (this.config.aspect_ratio == "16:9") {
-            GameDisplay.setAspectRatio(AspectRatio._21x9);
-        } else if (this.config.aspect_ratio == "21:9") {
-            GameDisplay.setAspectRatio(AspectRatio._21x9);
-        }
-
         if (this.cameraLoadedFlag) {
+
+            if (this.config.aspect_ratio == "16:9") {
+                GameDisplay.setAspectRatio(AspectRatio._21x9);
+            } else if (this.config.aspect_ratio == "21:9") {
+                GameDisplay.setAspectRatio(AspectRatio._21x9);
+            }
 
             if (this.config.framerate_enhance == "true") {
                 if (Link.isCrawling()) {
@@ -42,6 +43,8 @@ export class ModMain {
                 } else {
                     GameDisplay.setFrameRate(0x02);
                 }
+            } else {
+                GameDisplay.setFrameRate(0x03);
             }
             
             if (this.config.draw_distance_enhance == "true") {
