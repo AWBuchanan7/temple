@@ -1,5 +1,6 @@
 import { GameDisplay, AspectRatio } from "../Temple/Display";
 import { GameCamera } from "../Temple/Camera";
+import { Link } from "../Temple/Link";
 
 export class ModMain {
 
@@ -7,8 +8,9 @@ export class ModMain {
 
     Init(mem, u8, u16, u32) {
         GameDisplay.initialize(mem, u8, u16, u32);
+        Link.initialize(mem, u8, u16, u32);
         this.cameraLoadedFlag = false;
-
+        
         GameDisplay.setAspectRatio(AspectRatio._21x9);
     }
 
@@ -22,12 +24,21 @@ export class ModMain {
         GameDisplay.setAspectRatio(AspectRatio._21x9);
 
         if (this.cameraLoadedFlag) {
-            GameDisplay.setFrameRate(0x02);
+
+            if (Link.isCrawling()) {
+                GameDisplay.setFrameRate(0x03);
+            } else {
+                GameDisplay.setFrameRate(0x02);
+            }
+            
             GameDisplay.setDrawDistance(0x3E80);
+
         } else {
+
             if (GameCamera.isFollowingLink()) {
                 this.cameraLoadedFlag = true;
             }
+
         }
     }
 
