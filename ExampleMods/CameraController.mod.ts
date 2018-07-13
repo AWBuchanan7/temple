@@ -15,13 +15,23 @@ export class ModMain {
     roll_sensitivity_habit = 31;
     rolls = 100;
 
+    /*
+     * The player input classes to monitor for camera controls.
+     *
+     */
     Player1: PlayerInput;
     Player3: PlayerInput;
 
 
+    /*
+     * The ModMain.Init() function performs setup operations for a Temple-based mod. It executes prior to the
+     * ModMain.Run() function and is only executed once.
+     */
     Init(mem, u8, u16, u32) {
+        // Initialize player input detection for players 1 and 3.
         this.Player1 = new PlayerInput(1, mem, u8, u16, u32);
         this.Player3 = new PlayerInput(3, mem, u8, u16, u32);
+        // Initialize the game camera.
         GameCamera.initialize(mem, u8, u16, u32);
     }
 
