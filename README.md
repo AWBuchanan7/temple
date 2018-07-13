@@ -17,6 +17,6 @@ Grab the latest version of Project64 and include the built Temple files in your 
 ## Example Mods
 Currently Temple comes bundled with some example mods, the most notable of these mods are described here. _(Note: these mods are in early alpha stage development and come with many bugs, give them a try, but please understand they are essentially "early access")_
 
- * __CameraController.mod.js__ this mod adds dynamic control to the game's camera, allowing player three's analog stick to rotate the camera around Link freely.
- * __DisplayAmplify.mod.js__ this mod aims to overhaul the game by enhancing the aspect ratio, framerate, and draw distance.
+ * __CameraController.mod.ts__ this mod adds dynamic control to the game's camera, allowing player three's analog stick to rotate the camera around Link freely.
+ * __DisplayAmplify.mod.ts__ this mod aims to overhaul the game by enhancing the aspect ratio, framerate, and draw distance.
  * __EquipmentChange.mod.ts__ this mod simply binds the Slingshot to B and the kokiri sword to C-Down as a proof of concept for dynamically controlling what items are equipped. This mod is not configured to run by default. 
