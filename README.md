@@ -6,7 +6,7 @@ __Please see our wiki for more information: [Temple Wiki](https://github.com/AWB
 Also, feel free to open an issue if you have problems! Or, if you are a hacker feel free to contribute or to open an issue to get in touch with me to share information about the game! Anything helps, even just Gameshark codes/memory addresses and what they do!
 
 ## Building
-You'll need [grunt-cli](https://github.com/gruntjs/grunt-cli), once you have it just run the "grunt" command in the root directory of the project and it will bundle everything up into the "./builds/" directory.
+You'll need [grunt-cli](https://github.com/gruntjs/grunt-cli), once you have it just run the "grunt" command in the root directory of the project and it will bundle everything up into the "./builds/" directory, where it will be ready for deployment.
 
 ## Example Mods
 Currently Temple comes bundled with some example mods, the most notable of these mods are described here. _(Note: these mods are in early alpha stage development and come with a fair share of bugs, give them a try, but please understand they are essentially "early access")._
