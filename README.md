@@ -8,11 +8,6 @@ Also, feel free to open an issue if you have problems! Or, if you are a hacker f
 ## Building
 You'll need [grunt-cli](https://github.com/gruntjs/grunt-cli), once you have it just run the "grunt" command in the root directory of the project and it will bundle everything up into the "./builds/" directory.
 
-## Editing ModLoader.js
-ModLoader.js is a JavaScript "compatibility layer" that loads the compiled TypeScript up into Project64's debugger. If you add new mods you'll have to edit this file.
-
-As well, currently you have to edit ModLoader.js to tell it where your Project64 directory is located. See the [Installation and Usage page](https://github.com/AWBuchanan7/Temple/wiki/Installation-and-Usage) for more details.
-
 ## Example Mods
 Currently Temple comes bundled with some example mods, the most notable of these mods are described here. _(Note: these mods are in early alpha stage development and come with a fair share of bugs, give them a try, but please understand they are essentially "early access")._
 
