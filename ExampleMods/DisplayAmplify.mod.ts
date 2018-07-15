@@ -1,5 +1,6 @@
 import { GameDisplay, AspectRatio } from "../Temple/Display";
 import { GameCamera } from "../Temple/Camera";
+import { GameWorld } from "../Temple/World";
 import { Link } from "../Temple/Link";
 
 export class ModMain {
@@ -10,6 +11,7 @@ export class ModMain {
 
     Init(mem, u8, u16, u32, _config) {
         GameDisplay.initialize(mem, u8, u16, u32);
+        GameWorld.initialize(mem, u8, u16, u32);
         Link.initialize(mem, u8, u16, u32);
         this.cameraLoadedFlag = false;
         this.config = JSON.parse(_config);
@@ -41,6 +43,9 @@ export class ModMain {
                 if (Link.isCrawling()) {
                     GameDisplay.setFrameRate(0x03);
                 } else {
+                    if (Link.isJumping()) {
+                        GameWorld.setGravityConstant(0xBF32);
+                    }
                     GameDisplay.setFrameRate(0x02);
                 }
             } else {
