@@ -12,7 +12,7 @@ ModLoader.js is a JavaScript "compatibility layer" that loads the compiled TypeS
 As well, currently you have to edit ModLoader.js to tell it where your Project64 directory is located.
 
 ## Installation & Usage
-Currently, you'll need to build the latest version of [Project64](https://github.com/project64/project64) as their latest public release does not yet feature the functionality required by Temple.
+Currently, you'll need to build the latest version of [Project64](https://github.com/project64/project64) yourself as their most recent public release does not feature the functionality required by Temple. If you happen to be a [Patreon supporter for Project64](https://www.pj64-emu.com/nightly-builds), they offer these Development builds pre-built for you as well.
 
 Once you have the latest Project64, include the built Temple files (you can get the latest release build from our [Releases page](https://github.com/AWBuchanan7/Temple/releases)) in your ".../Project64/Scripts/" directory.
 
