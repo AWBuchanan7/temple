@@ -57,7 +57,7 @@ export class ModMain {
             }
 
         } else {
-
+            // This logic is so that we wait until the game is fully running to activate this mod.
             if (GameCamera.isFollowingLink()) {
                 this.cameraLoadedFlag = true;
             }
