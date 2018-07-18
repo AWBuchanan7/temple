@@ -14,14 +14,7 @@ export class ModMain {
         GameWorld.initialize(mem, u8, u16, u32);
         Link.initialize(mem, u8, u16, u32);
         this.cameraLoadedFlag = false;
-        this.config = JSON.parse(_config);
-
-        if (this.config.aspect_ratio == "16:9") {
-            GameDisplay.setAspectRatio(AspectRatio._21x9);
-        } else if (this.config.aspect_ratio == "21:9") {
-            GameDisplay.setAspectRatio(AspectRatio._21x9);
-        }
-        
+        this.config = JSON.parse(_config);        
     }
 
     /*
