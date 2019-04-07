@@ -46,7 +46,7 @@ export class GameCamera {
     }
 
     static isFollowingLink(){
-        return this.camera_context == 0xC114;
+        return this.camera_context == 0xC114 || this.camera_context == 0xC159;
     }
 
     static rollUp(rollAmount: number) {
