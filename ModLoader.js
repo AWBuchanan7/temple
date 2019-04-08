@@ -2,7 +2,7 @@
  * == Configuration ==
  * ===================
  */
-var RESIDENCE = 'C:/Users/Walker/OneDrive/Games/SuperSaix Mod Manager/Util/Ocarina of Time/Scripts/';
+var RESIDENCE = 'C:/AWBuchanan7/Ocarina of Time (Angrylion)/Scripts/';
 
 /* =======================
  * == Define Mod Search ==

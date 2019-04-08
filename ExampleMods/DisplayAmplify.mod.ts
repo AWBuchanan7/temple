@@ -17,7 +17,6 @@ export class ModMain {
         Link.initialize(mem, u8, u16, u32);
         this.cameraLoadedFlag = false;
         this.config = JSON.parse(_config);
-        
     }
 
     /*
@@ -33,6 +32,8 @@ export class ModMain {
             } else if (this.config.aspect_ratio == "21:9") {
                 GameDisplay.setAspectRatio(AspectRatio._21x9);
             }
+
+            ItemHookshot.bindLengthAddress();
 
             if (this.config.framerate_enhance == "true") {
                 if (Link.isCrawling()) {
