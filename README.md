@@ -1,25 +1,18 @@
 # Temple
-A library for modding The Legend of Zelda: Ocarina of Time with TypeScript in Project64. Temple is in _very_ early stage development. Currently the actual implementation of Temple exists in the "./Temple/" directory. An early example mod that uses Temple is defined in the "./ExampleMods/" directory.
 
-Feel free to open an issue if you have problems! Or, if you are a hacker feel free to contribute or to open an issue to get in touch with me to share information about the game! Anything helps, even just Gameshark codes/memory addresses and what they do!
+![https://raw.githubusercontent.com/AWBuchanan7/Temple/master/triforce.jpg](https://raw.githubusercontent.com/AWBuchanan7/Temple/master/triforce.jpg)
+
+A library for modding The Legend of Zelda: Ocarina of Time with TypeScript in Project64. Temple is in _very_ early stage development. Currently the actual implementation of Temple exists in the "./Temple/" directory of the repository. Early demonstrative mods that are built with Temple are included in the "./ExampleMods/" directory of the repository.
+
+__Please see our wiki for more information: [Temple Wiki](https://github.com/AWBuchanan7/Temple/wiki)!__ The wiki includes info on where the project is going, and how to install Temple!
+
+Also, feel free to open an issue if you have problems! Or, if you are a hacker feel free to contribute or to open an issue to get in touch with me to share information about the game! Anything helps, even just Gameshark codes/memory addresses and what they do!
 
 ## Building
-You'll need [grunt-cli](https://github.com/gruntjs/grunt-cli), once you have it just run the "grunt" command in the root directory of the project and it will bundle everything up into the "./builds/" directory.
-
-## Editing ModLoader.js
-ModLoader.js is a JavaScript "compatibility layer" that loads the compiled TypeScript up into Project64's debugger. If you add new mods you'll have to edit this file.
-
-As well, currently you have to edit ModLoader.js to tell it where your Project64 directory is located.
-
-## Installation & Usage
-Currently, you'll need to build the latest version of [Project64](https://github.com/project64/project64) yourself as their most recent public release does not feature the functionality required by Temple. If you happen to be a [Patreon supporter for Project64](https://www.pj64-emu.com/nightly-builds), they offer these Development builds pre-built for you as well.
-
-Once you have the latest Project64, include the built Temple files (you can get the latest release build from our [Releases page](https://github.com/AWBuchanan7/Temple/releases)) in your ".../Project64/Scripts/" directory.
-
-Once the Temple files have been installed to your Scripts directory you should find that "ModLoader.js" is available under Project64's 'Debugger' menu's 'Scripts' option. Right-click on "ModLoader.js" and select 'Run'. ModLoader will import and register Temple and then load any __configured__ mods from the "./ExampleMods/" or "./Mods/" directories.
+You'll need [grunt-cli](https://github.com/gruntjs/grunt-cli), once you have it just run the "grunt" command in the root directory of the project and it will bundle everything up into the "./builds/" directory, where it will be ready for deployment.
 
 ## Example Mods
-Currently Temple comes bundled with some example mods, the most notable of these mods are described here. _(Note: these mods are in early alpha stage development and come with many bugs, give them a try, but please understand they are essentially "early access")_
+Currently Temple comes bundled with some example mods, the most notable of these mods are described here. _(Note: these mods are in early alpha stage development and come with a fair share of bugs, give them a try, but please understand they are essentially "early access")._
 
  * __CameraController.mod.ts__ this mod adds dynamic control to the game's camera, allowing player three's analog stick to rotate the camera around Link freely.
  * __DisplayAmplify.mod.ts__ this mod aims to overhaul the game by enhancing the aspect ratio, framerate, and draw distance.
