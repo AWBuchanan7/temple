@@ -23,6 +23,7 @@
     "grunt": "^1.0.3",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-typescript": "^0.8.0",
-    "js-yaml": ">=3.13.1"
+    "js-yaml": ">=3.13.1",
+    "braces": ">=2.3.1"
   }
 }
