@@ -28,3 +28,4 @@ $4E medium bomb bag	$4F large bomb bag	$50 goron bracelet
 $51 silver gauntlets	$52 golden gauntlets	$53 silver scale
 $54 golden scale	$55 broken giants knife	$56 adult wallet
 $57 giant wallet	$58 deku seeds		$59 fishing rod
+$ff nothing

@@ -24,6 +24,17 @@
 // Kid Link Item
 // 8011845B ????
 
+
+// 5c is quantity for 44
+// 5d is quantity for 45
+
+// 62 is quantity for 4A
+// 64 is quantity for 4C
+// 68
+// 69
+// 6A is quantity for 52
+// 6C determines if all equipment is unlocked(?)
+
 export class ItemSlot {
 
   static SLOT_C_RIGHT;
@@ -57,7 +68,7 @@ export class ItemSlot {
     mem.bindvar(this, 0x8011844A, 'SLOT_7', u8); // slingshot slot
     mem.bindvar(this, 0x8011844B, 'SLOT_8', u8); // ocarina slot
 
-    mem.bindvar(this, 0x8011844C, 'slot_9A', u8); // hookshot slot
+    mem.bindvar(this, 0x8011844C, 'slot_9A', u8); // bombchu slot
     mem.bindvar(this, 0x8011844D, 'slot_9B', u8); // longshot slot
     mem.bindvar(this, 0x8011844E, 'slot_10', u8); // ice arrow slot
     mem.bindvar(this, 0x8011844F, 'slot_11', u8); // farore slot
