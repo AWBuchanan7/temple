@@ -11,9 +11,6 @@ Also, feel free to open an issue if you have problems! Or, if you are a hacker f
 ## Building
 You'll need [grunt-cli](https://github.com/gruntjs/grunt-cli), once you have it just run the "grunt" command in the root directory of the project and it will bundle everything up into the "./builds/" directory, where it will be ready for deployment.
 
-## Support
-Please consider supporting me (and thus, development) on [Patreon](https://www.patreon.com/moonraccoon)!
-
 ## Example Mods
 Currently Temple comes bundled with some example mods, the most notable of these mods are described here. _(Note: these mods are in early alpha stage development and come with a fair share of bugs, give them a try, but please understand they are essentially "early access")._
 
